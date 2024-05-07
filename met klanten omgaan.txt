@@ -1,0 +1,9 @@
+met klanten omgaan:
+
+je ziet een volledige karwei met allemaal klanten die rond lopen
+de klanten krijgen op een willekeurig moment een uitroepteken boven hun hoofd
+als een klant een uitroepteken heeft dan moet de speler naar die klant gaan
+als de speler bij de klant is dan krijg de speler een taak om uit te voeren
+taken zijn bijv.:
+	klant wijzen naar de locatie waar ze naar toe willen
+	

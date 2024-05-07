@@ -1,0 +1,13 @@
+stofzuigen:
+
+top down
+stof ligt op vloer op willkeurige plekken
+speler moet alle stof opzuigen en krijgt punten gebaseerd op hoeveel (procentueel) stof de speler heeft opgezogen
+	sommige plekken stof zijn duidelijker zichtbaar dan anderen
+	stofzuiger moet over de stof heengaan om stof op te zuigen
+tijdslimit van 1 minuut
+vloer is binnenkant van een karwei
+	er zijn ruimtes die aan elkaar verbonden zijn op willekeurige plekken
+	er zijn obstakels die de speler moet ontwijken (obstakel aanraken maakt de speler tijdelijk langzamer)
+	obstakels zijn willekeurig geplaatst
+	er is één obstakel en als die wordt aangeraakt dan gaat de speler naar de backrooms
