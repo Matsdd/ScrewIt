@@ -1,6 +1,0 @@
-klanten bestelling geven:
-klant geeft omschrijving van onderdeel
-speler krijgt de vakken te zien waar het onderdeel in zit en moet het juiste onderdeel aanwijzen
-
-klant geeft omschrijving van situatie
-speler krijgt een aantal opties te zien waarvan de speler de optie moet kiezen die het beste past bij de situatie
