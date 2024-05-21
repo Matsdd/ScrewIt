@@ -10,12 +10,15 @@ public class HammerScript : MonoBehaviour
     private bool setPosition = false;
     private float charge = 0;
     private bool getSlam = false;
-    private float currentSlamCharge = 0;
+    private float currentSlamCharge = 180;
 
     private void OnMouseDown()
     {
         setPosition = true;
         hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        charge = 0;
+        currentSlamCharge = 180;
+        hammerRb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
     private void OnMouseUp()
@@ -27,7 +30,7 @@ public class HammerScript : MonoBehaviour
     {
         if (setPosition)
         {
-            hammer.transform.position = Input.mousePosition;
+            hammerRb.MovePosition(Input.mousePosition);
             hammerRb.Sleep();
         }
         else
@@ -44,29 +47,20 @@ public class HammerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && setPosition && charge > -70)
+        if (Input.GetKey(KeyCode.Space) && setPosition && charge > -70 && !getSlam)
         {
-            Debug.Log(charge);
-            if (charge > 0)
-            {
-                charge -= 2.5f;
-            }
-            else
-            {
-                charge -= 0.5f;
-            }
+            charge -= charge > 0 ? 3 : 1;
             hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, charge));
         }
 
-
-        if (charge > 180)
+        if (charge > (currentSlamCharge * -2.5))
         {
             getSlam = false;
         }
 
         if (getSlam)
         {
-            charge -= currentSlamCharge/5;
+            charge -= currentSlamCharge/4;
             hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, charge));
         }
     }
