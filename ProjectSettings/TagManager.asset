@@ -7,7 +7,7 @@ TagManager:
   - HitBox1
   - HitBox2
   - HitBox3
-  - Hammer
+  - HitBox4
   layers:
   - Default
   - TransparentFX
