@@ -15,7 +15,7 @@ public class GameScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        time -= 0.01f;
+        time -= (1/60);
         txt1.text = Mathf.Round(time) + " sec";
 
         txt2.text = hits + " hits";

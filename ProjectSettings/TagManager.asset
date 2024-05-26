@@ -8,6 +8,7 @@ TagManager:
   - HitBox2
   - HitBox3
   - HitBox4
+  - HitBox5
   layers:
   - Default
   - TransparentFX

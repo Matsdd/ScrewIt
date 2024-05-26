@@ -7,10 +7,13 @@ public class nailScript : MonoBehaviour
     private bool nailHit = false;
     public GameObject newNail;
     private static int num = 1;
+    private bool crooked = false;
 
     private void Start()
     {
+        num++;
         this.gameObject.name = "Nail" + num;
+        Debug.Log(num);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,19 +57,45 @@ public class nailScript : MonoBehaviour
                 GameScript.time -= 1;
                 nailHit = true;
 
-                setHit();
+                setCrooked();
+            }
+        }
+        else if (collision.gameObject.CompareTag("HitBox5"))
+        {
+            if (crooked)
+            {
+                setPosition(100);
+                spawnNail();
             }
         }
     }
 
     void setHit()
     {
-        Vector2 newPosition = this.gameObject.transform.position;
-        newPosition.y -= 20;
-        this.gameObject.transform.position = newPosition;
-        num++;
+        setPosition(20);
 
         spawnNail();
+    }
+
+    void setPosition(int ypos)
+    {
+        Vector2 newPosition = this.gameObject.transform.position;
+        newPosition.y -= ypos;
+        this.gameObject.transform.position = newPosition;
+    }
+
+    void setCrooked()
+    {
+        int abcdefghijklmnopqrstuvwxyz = Random.Range(0, 1);
+        if (abcdefghijklmnopqrstuvwxyz == 0)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 30);
+        }
+        else
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, -30);
+        }
+        crooked = true;
     }
 
     void spawnNail()

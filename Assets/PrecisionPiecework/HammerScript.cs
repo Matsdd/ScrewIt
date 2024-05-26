@@ -55,11 +55,11 @@ public class HammerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && setPosition && charge > -70 && !getSlam)
         {
-            charge -= charge > 0 ? 4 : 2.5f;
+            charge -= charge > 0 ? 5 : 3.5f;
             hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, charge));
         }
 
-        if (charge > (currentSlamCharge * -2.5))
+        if (charge > (currentSlamCharge * -1.5))
         {
             getSlam = false;
         }
@@ -68,6 +68,12 @@ public class HammerScript : MonoBehaviour
         {
             charge -= currentSlamCharge/6;
             hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, charge));
+        }
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
     }
 }
