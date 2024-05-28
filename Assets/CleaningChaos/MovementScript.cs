@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    public GameObject Sparks; // Reference to the particle system prefab
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,6 +56,10 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             GameManager.Instance.WallCounter();
+            // Get the point of contact
+            ContactPoint contact = collision.contacts[0];
+            // Instantiate the particle system at the point of contact
+            Instantiate(Sparks, contact.point, Quaternion.identity);
         }
     }
 }
