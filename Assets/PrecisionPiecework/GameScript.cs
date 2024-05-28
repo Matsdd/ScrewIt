@@ -16,6 +16,7 @@ public class GameScript : MonoBehaviour
     public TMP_Text scoreTxt;
     private static float highScore;
     public static bool gameStarted;
+    private static bool lost;
 
 
     private void Start()
@@ -24,6 +25,7 @@ public class GameScript : MonoBehaviour
         hits = 0;
         time = 20;
         gameStarted = false;
+        lost = false;
         highScore = PlayerPrefs.GetInt("Highscore");
     }
 
@@ -42,7 +44,7 @@ public class GameScript : MonoBehaviour
         ypostxt += 0.3f;
         txt3.transform.position = new Vector2(366,ypostxt);
 
-        if (time <= 0)
+        if (time <= 0 && !lost)
         {
             youLose();
         }
@@ -50,6 +52,7 @@ public class GameScript : MonoBehaviour
 
     void youLose()
     {
+        lost = true;
         canvas.enabled = true;
         if (hits > highScore)
         {
