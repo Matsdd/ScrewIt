@@ -10,10 +10,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        // Freeze rotation on all axes to prevent the capsule from rolling
+        // Freeze rotation on the X and Z axes to prevent the capsule from tipping over
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-        // Optionally, you can also freeze the Y position if you don't want any vertical movement
-        rb.constraints |= RigidbodyConstraints.FreezePositionY;
     }
 
     void Update()
@@ -40,6 +38,22 @@ public class PlayerMovement : MonoBehaviour
         {
             // If there's no input, stop the movement
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Handle collisions with puddles
+        if (collision.gameObject.CompareTag("Puddle"))
+        {
+            // Access the GameManager to update the contact count
+            GameManager.Instance.PuddleCounter();
+            // Destroy the puddle to simulate cleaning
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            GameManager.Instance.WallCounter();
         }
     }
 }
