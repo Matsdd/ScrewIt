@@ -91,5 +91,6 @@ public class GameManager : MonoBehaviour
     {
         EndCanvas.gameObject.SetActive(!EndCanvas.gameObject.activeSelf);
         textMeshPro.text = "Completed with a score of:  " + score;
+        PlayerPrefs.SetInt("HighscoreBoen", score);
     }
 }
