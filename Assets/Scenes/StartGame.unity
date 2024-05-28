@@ -587,11 +587,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 248231643}
-  m_Father: {fileID: 270383487}
+  m_Father: {fileID: 514520908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: -142}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 140, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260090313
@@ -783,16 +783,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 645076753}
-  - {fileID: 2049199958}
-  - {fileID: 514520908}
-  - {fileID: 1299610503}
-  - {fileID: 2029440325}
-  - {fileID: 1773867295}
   - {fileID: 1333453216}
-  - {fileID: 1023451496}
-  - {fileID: 260090311}
-  - {fileID: 1763761216}
+  - {fileID: 2029440325}
+  - {fileID: 1299610503}
+  - {fileID: 645076753}
+  - {fileID: 514520908}
+  - {fileID: 2049199958}
   - {fileID: 46807605}
   - {fileID: 284134042}
   - {fileID: 1350689631}
@@ -907,7 +903,7 @@ GameObject:
   - component: {fileID: 514520910}
   - component: {fileID: 514520909}
   m_Layer: 5
-  m_Name: Game (2)
+  m_Name: Kleurenkies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,6 +922,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1694900086}
+  - {fileID: 260090311}
   m_Father: {fileID: 270383487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1385,7 +1382,7 @@ GameObject:
   - component: {fileID: 645076755}
   - component: {fileID: 645076754}
   m_Layer: 5
-  m_Name: Game (1)
+  m_Name: sorteer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1404,6 +1401,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1395285010}
+  - {fileID: 1023451496}
   m_Father: {fileID: 270383487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1898,11 +1896,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 592316884}
-  m_Father: {fileID: 270383487}
+  m_Father: {fileID: 645076753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: 14.000015}
+  m_AnchoredPosition: {x: 0, y: -39.99997}
   m_SizeDelta: {x: 140, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023451498
@@ -2279,7 +2277,7 @@ GameObject:
   - component: {fileID: 1299610505}
   - component: {fileID: 1299610504}
   m_Layer: 5
-  m_Name: Game
+  m_Name: PrecisionPiecework
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2298,6 +2296,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1877663345}
+  - {fileID: 1773867295}
   m_Father: {fileID: 270383487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2624,7 +2623,7 @@ GameObject:
   - component: {fileID: 1333453218}
   - component: {fileID: 1333453217}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3199,11 +3198,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 70806831}
-  m_Father: {fileID: 270383487}
+  m_Father: {fileID: 2049199958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: -142}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 140, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763761217
@@ -3344,11 +3343,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 551729895}
-  m_Father: {fileID: 270383487}
+  m_Father: {fileID: 1299610503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: 14.000015}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 140, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773867297
@@ -4020,7 +4019,7 @@ GameObject:
   - component: {fileID: 2049199960}
   - component: {fileID: 2049199959}
   m_Layer: 5
-  m_Name: Game (3)
+  m_Name: CleaningChaos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4039,6 +4038,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838198450}
+  - {fileID: 1763761216}
   m_Father: {fileID: 270383487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
