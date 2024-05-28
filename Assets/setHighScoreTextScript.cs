@@ -13,6 +13,8 @@ public class setHighScoreTextScript : MonoBehaviour
     public TMP_Text txt3;
     //boenen
     public TMP_Text txt4;
+    //total
+    public TMP_Text txt5;
 
     private void Start()
     {
