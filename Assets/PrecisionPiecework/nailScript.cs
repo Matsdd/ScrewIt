@@ -20,49 +20,53 @@ public class nailScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HitBox1"))
         {
-            if (!nailHit)
+            if (!nailHit && HammerScript.getSlam)
             {
                 GameScript.time += 2;
                 GameScript.hits++;
                 nailHit = true;
+                HammerScript.getSlam = false;
 
                 setHit();
             }
         }
         else if (collision.gameObject.CompareTag("HitBox2"))
         {
-            if (!nailHit)
+            if (!nailHit && HammerScript.getSlam)
             {
                 GameScript.time += 1;
                 GameScript.hits++;
                 nailHit = true;
+                HammerScript.getSlam = false;
 
                 setHit();
             }
         }
         else if (collision.gameObject.CompareTag("HitBox3"))
         {
-            if (!nailHit)
+            if (!nailHit && HammerScript.getSlam)
             {
                 GameScript.hits++;
                 nailHit = true;
+                HammerScript.getSlam = false;
 
                 setHit();
             }
         }
         else if (collision.gameObject.CompareTag("HitBox4"))
         {
-            if (!nailHit)
+            if (!nailHit && HammerScript.getSlam)
             {
                 GameScript.time -= 1;
                 nailHit = true;
+                HammerScript.getSlam = false;
 
                 setCrooked();
             }
         }
         else if (collision.gameObject.CompareTag("HitBox5"))
         {
-            if (crooked)
+            if (crooked && HammerScript.flipped)
             {
                 setPosition(100);
                 spawnNail();
@@ -106,7 +110,7 @@ public class nailScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (this.gameObject.name == "Nail"+(num-5))
+        if (this.gameObject.name == "Nail"+(num-8))
         {
             Destroy(this.gameObject);
         }

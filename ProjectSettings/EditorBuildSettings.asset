@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Titlescreen.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/PrecisionPiecework.unity
+    guid: a80cf3a22513c544684f5b925ea3702e
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

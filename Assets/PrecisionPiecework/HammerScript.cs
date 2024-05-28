@@ -9,17 +9,22 @@ public class HammerScript : MonoBehaviour
 
     private bool setPosition = false;
     private float charge = 0;
-    private bool getSlam = false;
+    public static bool getSlam = false;
+    public static bool flipped = false;
     private float currentSlamCharge = 180;
 
 
     private void OnMouseDown()
     {
-        setPosition = true;
-        hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        charge = 0;
-        currentSlamCharge = 180;
-        hammerRb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        if (GameScript.time > 0)
+        {
+            setPosition = true;
+            hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            charge = 0;
+            currentSlamCharge = 180;
+            hammerRb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            GameScript.gameStarted = true;
+        }
     }
 
     private void OnMouseUp()
@@ -29,7 +34,7 @@ public class HammerScript : MonoBehaviour
 
     private void Update()
     {
-        if (setPosition)
+        if (setPosition && GameScript.time > 0)
         {
             hammerRb.MovePosition(Input.mousePosition);
             hammerRb.Sleep();
@@ -48,6 +53,16 @@ public class HammerScript : MonoBehaviour
         if (this.gameObject.transform.position.y < -100)
         {
             this.gameObject.transform.position = new Vector2(366,180);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+            flipped = true;
+        }
+        else
+        {
+            flipped = false;
         }
     }
 
@@ -68,12 +83,6 @@ public class HammerScript : MonoBehaviour
         {
             charge -= currentSlamCharge/6;
             hammer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, charge));
-        }
-
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
     }
 }
