@@ -56,6 +56,7 @@ public class GameScript : MonoBehaviour
             highScore = hits;
             PlayerPrefs.SetInt("Highscore", hits);
         }
+        PlayerPrefs.SetInt("TotalScore", (hits + PlayerPrefs.GetInt("TotalScore")));
         scoreTxt.text = "Final score: "+hits+"\nHigh score: "+highScore;
     }
 }
