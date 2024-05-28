@@ -22,7 +22,7 @@ public class nailScript : MonoBehaviour
         {
             if (!nailHit)
             {
-                GameScript.time += 3;
+                GameScript.time += 2;
                 GameScript.hits++;
                 nailHit = true;
 
