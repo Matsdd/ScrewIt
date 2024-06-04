@@ -55,7 +55,7 @@ public class HammerScript : MonoBehaviour
             this.gameObject.transform.position = new Vector2(366,180);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && setPosition)
         {
             this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
             flipped = true;
