@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CleaningChaos.unity
     guid: eb547a9b5dbd0d945999a2dce11f85d2
+  - enabled: 1
+    path: Assets/Scenes/PaintMiniGameScene.unity
+    guid: 27aec9a1d449be849a04d8173eb76179
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
