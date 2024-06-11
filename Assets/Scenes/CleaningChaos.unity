@@ -5914,7 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 720
-  Sparks: {fileID: 0}
+  Sparks: {fileID: 7353675622981356121, guid: 618e4e4c788a8014d8141239c7286e91, type: 3}
 --- !u!54 &527214540
 Rigidbody:
   m_ObjectHideFlags: 0
