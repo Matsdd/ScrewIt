@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int totalTime = 0;
     public float time = 0f;
     private bool isTimerRunning = false;
+    private static float Highscore;
+
 
     public Canvas StartCanvas;
     public Canvas EndCanvas;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
         StartCanvas.gameObject.SetActive(!StartCanvas.gameObject.activeSelf);
         SpawnPuddles();
         isTimerRunning = true;
+        Highscore = PlayerPrefs.GetInt("HighscoreBoen");
     }
 
     void Update()
@@ -91,6 +94,10 @@ public class GameManager : MonoBehaviour
     {
         EndCanvas.gameObject.SetActive(!EndCanvas.gameObject.activeSelf);
         textMeshPro.text = "Completed with a score of:  " + score;
-        PlayerPrefs.SetInt("HighscoreBoen", score);
+        if (score > Highscore)
+        {
+            Highscore = score;
+            PlayerPrefs.SetInt("HighscoreBoen", score);
+        }
     }
 }
