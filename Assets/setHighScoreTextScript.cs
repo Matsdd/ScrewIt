@@ -20,6 +20,7 @@ public class setHighScoreTextScript : MonoBehaviour
     {
         txt1.text = "Highscore = " + PlayerPrefs.GetInt("Highscore");
 
+        txt3.text = "Highscore = " + PlayerPrefs.GetInt("Highscorepaint");
         txt4.text = "Highscore = " + PlayerPrefs.GetInt("HighscoreBoen");
         txt5.text = "Total score = " + PlayerPrefs.GetInt("TotalScore");
     }

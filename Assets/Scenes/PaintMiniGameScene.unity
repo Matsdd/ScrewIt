@@ -520,7 +520,7 @@ MonoBehaviour:
   timesUpAlert: {fileID: 1704147061}
   scoreText: {fileID: 1569083519}
   currentScore: {fileID: 1144949418}
-  gameDuration: 5
+  gameDuration: 15
 --- !u!1 &727022520
 GameObject:
   m_ObjectHideFlags: 0
