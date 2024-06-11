@@ -10,6 +10,7 @@ public class PaintVatScript : MonoBehaviour
     private float redAmount, blueAmount, yellowAmount;
     public Color targetColor;
     public int score = 0;
+    private int highscore = 0;
     private int totalPumpsUsed = 0;
     private List<Color> validColors;
 
@@ -46,6 +47,11 @@ public class PaintVatScript : MonoBehaviour
         timeRemaining = gameDuration;
         timesUpAlert.SetActive(false); // Hide the alert initially
         UpdateScoreText();
+        if(PlayerPrefs.GetInt("Highscorepaint") > 0)
+        {
+            highscore = PlayerPrefs.GetInt("Highscorepaint");
+        }
+        
     }
 
     void Update()
@@ -164,7 +170,11 @@ public class PaintVatScript : MonoBehaviour
             timeRemaining = 0;
             timerText.text = "Time: 0";
             timesUpAlert.SetActive(true);
-            PlayerPrefs.SetInt("Highscorepaint", score);
+            if(score > highscore)
+            {
+                PlayerPrefs.SetInt("Highscorepaint", score);
+            }
+            
             // Optionally, add logic to stop the game or transition to another scene
         }
     }
