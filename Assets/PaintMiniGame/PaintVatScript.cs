@@ -164,6 +164,7 @@ public class PaintVatScript : MonoBehaviour
             timeRemaining = 0;
             timerText.text = "Time: 0";
             timesUpAlert.SetActive(true);
+            PlayerPrefs.SetInt("Highscorepaint", score);
             // Optionally, add logic to stop the game or transition to another scene
         }
     }
